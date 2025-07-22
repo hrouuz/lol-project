@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Leaguepedia - League of Legends Wiki</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <div class="logo">
+    <div class="logo-icon">LoL</div>
+    <h1>Leaguepedia</h1>
+  </div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link active" aria-current="page">Home</a></li>
+      <li><a href="#champions" class="nav-link">Champions</a></li>
+      <li><a href="#items" class="nav-link">Items</a></li>
+      <li><a href="#runes" class="nav-link">Runes</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="main-container">
+  <!-- Home Section -->
+  <section id="home" class="hero-section fade-in" style="display: block;">
+    <h2>Welcome to the League of Legends Wiki!</h2>
+    <p>This is the ultimate resource for <a href="https://www.leagueoflegends.com/" target="_blank" rel="noopener noreferrer">League of Legends</a>, 
+       the multiplayer online battle arena game developed by <a href="https://www.riotgames.com/" target="_blank" rel="noopener noreferrer">Riot Games</a>.</p>
+    <p>Discover comprehensive information about champions, items, runes, and gameplay mechanics.</p>
+    <p>Use the navigation above to explore different sections and enhance your knowledge of Runeterra.</p>
+    <p>Embark on your journey to master the Rift!</p>
+  </section>
+
+  <!-- Champions Section -->
+  <section id="champions" class="champions-section">
+    <div class="section-header">
+      <h2>Champions</h2>
+      <p>Explore the diverse roster of League of Legends champions. Each champion brings unique abilities, playstyles, and strategic depth to the Rift.</p>
+    </div>
+
+    <div class="filters">
+      <div class="filter-group">
+        <label for="class-filter">Class</label>
+        <select id="class-filter">
+          <option value="">All Classes</option>
+          <option value="Assassin">Assassin</option>
+          <option value="Fighter">Fighter</option>
+          <option value="Mage">Mage</option>
+          <option value="Marksman">Marksman</option>
+          <option value="Support">Support</option>
+          <option value="Tank">Tank</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="difficulty-filter">Difficulty</label>
+        <select id="difficulty-filter">
+          <option value="">All Difficulties</option>
+          <option value="1">Easy</option>
+          <option value="2">Moderate</option>
+          <option value="3">Hard</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="search">Search</label>
+        <input type="text" id="search" placeholder="Search champions..." />
+      </div>
+    </div>
+
+    <div class="champion-grid" id="champion-grid">
+      <div class="loading">
+        <div class="spinner"></div>
+        Loading champions...
+      </div>
+    </div>
+  </section>
+
+  <!-- Items Section -->
+  <section id="items" class="champions-section">
+    <div class="section-header">
+      <h2>Items</h2>
+      <p>Explore the item database with stats, builds, and recommendations.</p>
+    </div>
+
+    <div class="filters">
+      <div class="filter-group">
+        <label for="item-search">Search Items</label>
+        <input type="text" id="item-search" placeholder="Search items..." />
+      </div>
+      
+      <div class="filter-group">
+        <label for="availability-filter">Item Type</label>
+        <select id="availability-filter">
+          <option value="">All Items</option>
+          <option value="starter">Starter Items</option>
+          <option value="basic">Basic Items</option>
+          <option value="epic">Epic Items</option>
+          <option value="legendary">Legendary Items</option>
+          <option value="consumable">Consumables</option>
+          <option value="boots">Boots</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="price-min">Price Range</label>
+        <div class="price-range">
+          <input type="number" id="price-min" placeholder="Min" min="0" />
+          <span>to</span>
+          <input type="number" id="price-max" placeholder="Max" min="0" />
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label for="item-category">Category</label>
+        <select id="item-category">
+          <option value="">All Categories</option>
+          <option value="Damage">Damage</option>
+          <option value="CriticalStrike">Critical Strike</option>
+          <option value="AttackSpeed">Attack Speed</option>
+          <option value="OnHit">On-Hit</option>
+          <option value="ArmorPenetration">Armor Penetration</option>
+          <option value="SpellDamage">Ability Power</option>
+          <option value="Mana">Mana</option>
+          <option value="ManaRegen">Mana Regen</option>
+          <option value="MagicPenetration">Magic Penetration</option>
+          <option value="Health">Health</option>
+          <option value="HealthRegen">Health Regen</option>
+          <option value="Armor">Armor</option>
+          <option value="SpellBlock">Magic Resist</option>
+          <option value="Boots">Boots</option>
+          <option value="Consumable">Consumables</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="champion-grid" id="item-grid">
+      <div class="loading">
+        <div class="spinner"></div>
+        Loading items...
+      </div>
+    </div>
+  </section>
+
+  <!-- Runes Section -->
+</div>
+<section id="runes" class="page-section" style="display:none;">
+  <div class="section-header">
+    <h2>Runes</h2>
+    <p>Explore the most common rune setups used by League of Legends champions.</p>
+  </div>
+
+  <div class="filters" id="runes-filters">
+    <div class="filter-group">
+      <label for="rune-tree-filter">Primary Rune Tree</label>
+      <select id="rune-tree-filter">
+        <option value="">All Trees</option>
+        <option value="Precision">Precision</option>
+        <option value="Domination">Domination</option>
+        <option value="Sorcery">Sorcery</option>
+        <option value="Resolve">Resolve</option>
+        <option value="Inspiration">Inspiration</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label for="rune-search">Search by name</label>
+      <input type="text" id="rune-search" placeholder="Search runes...">
+    </div>
+  </div>
+
+  <div id="rune-grid" class="champion-grid" aria-live="polite">
+    <!-- Runes will be dynamically inserted here -->
+  </div>
+</section>
+<!-- Champion Details Modal -->
+<div id="champion-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="champion-modal-title">
+  <div class="modal-content">
+    <button id="modal-close" aria-label="Close champion details">&times;</button>
+    <h2 id="champion-modal-title"></h2>
+    <h3 id="champion-modal-subtitle"></h3>
+    <img id="champion-modal-image" alt="" />
+    <p id="champion-modal-lore"></p>
+    <p><strong>Recommended Positions:</strong> <span id="champion-modal-positions"></span></p>
+    <p><strong>Recommended Items:</strong></p>
+    <ul id="champion-modal-items"></ul>
+  </div>
+</div>
+
+
+<footer>
+  <p>&copy; 2025 Leaguepedia. All rights reserved.</p>
+  <p>For official game information, visit <a href="https://www.leagueoflegends.com/" target="_blank" rel="noopener noreferrer">League of Legends</a>.</p>
+  <p>Data provided by Riot Games API</p>
+</footer>
+<script src="code.js"></script>
+</body>
+</html>
