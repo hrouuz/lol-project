@@ -326,12 +326,74 @@
     grid.innerHTML = `<div style="color: #c84a4a; text-align:center; grid-column: 1 / -1;">${message}</div>`;
   }
 
-  function showItemDetails(itemId) {
-    const item = items.find(i => i.id.toString() === itemId);
-    if (!item) return;
+  // Function to show item details in a modal
+async function showItemDetails(itemId) {
+  const item = items.find(i => i.id.toString() === itemId);
+  if (!item) return;
 
-    alert(`${item.name}\n\n${stripHtml(item.description)}\n\nCost: ${item.gold}g\nAvailable: ${item.purchasable ? 'Yes' : 'No'}\nCategories: ${item.tags.join(', ')}\n\n${item.plaintext}`);
+  const itemModal = document.getElementById("item-modal");
+  const itemModalTitle = document.getElementById("item-modal-title");
+  const itemModalImage = document.getElementById("item-modal-image");
+  const itemModalDescription = document.getElementById("item-modal-description");
+  const itemModalPrice = document.getElementById("item-modal-price");
+  const itemModalStats = document.getElementById("item-modal-stats");
+
+  // Populate modal content
+  itemModalTitle.textContent = item.name;
+  itemModalImage.src = item.image;
+  itemModalImage.alt = item.name;
+
+  // Description from DDragon often contains HTML. We need to clean it up.
+  // The 'plaintext' property is usually cleaner, or you can use stripHtml.
+  itemModalDescription.innerHTML = item.description; // Using innerHTML to display formatted description from ddragon
+  // If you prefer a simpler, less formatted description, you can use:
+  // itemModalDescription.textContent = stripHtml(item.description);
+
+
+  itemModalPrice.textContent = `${item.gold}g`;
+
+  // For stats, we need to parse the description or tags to extract meaningful stats.
+  // DDragon's item API doesn't provide structured stats like champion abilities.
+  // For now, we'll use a simplified approach; a more robust solution might involve
+  // parsing 'description' HTML for stat lines or having a predefined mapping.
+  // For demonstration, let's just show some relevant tags or placeholder for stats.
+  let statsText = '';
+  // The 'description' often contains stats like "+80 Attack Damage". We can try to extract these.
+  const statMatches = item.description.match(/<stats>(.*?)<\/stats>/);
+  if (statMatches && statMatches[1]) {
+    statsText = stripHtml(statMatches[1]);
+  } else if (item.plaintext) {
+    statsText = item.plaintext; // Fallback to plaintext if stats tag isn't found
+  } else {
+    statsText = item.tags.join(', ') || 'No specific stats listed';
   }
+  
+  itemModalStats.textContent = statsText;
+
+
+  // Show the modal
+  itemModal.style.display = "block";
+  itemModal.setAttribute("aria-hidden", "false");
+}
+
+// Close item modal logic
+const itemModalCloseButton = document.getElementById("item-modal-close");
+if (itemModalCloseButton) {
+  itemModalCloseButton.addEventListener("click", () => {
+    const modal = document.getElementById("item-modal");
+    modal.style.display = "none";
+    modal.setAttribute("aria-hidden", "true");
+  });
+}
+
+// Also close item modal if user clicks outside the modal-content
+window.addEventListener("click", (e) => {
+  const itemModal = document.getElementById("item-modal");
+  if (e.target === itemModal) {
+    itemModal.style.display = "none";
+    itemModal.setAttribute("aria-hidden", "true");
+  }
+});
 
   // Utility to strip HTML tags from item descriptions
   function stripHtml(html) {
