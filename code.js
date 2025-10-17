@@ -6,7 +6,7 @@
   let items = [];
   let filteredItems = [];
 
-  const DATA_VERSION = '15.20.1'; 
+  const DATA_VERSION = '15.14.1'; 
   const CHAMPION_API = `https://ddragon.leagueoflegends.com/cdn/${DATA_VERSION}/data/en_US/champion.json`; 
   const ITEM_API = `https://ddragon.leagueoflegends.com/cdn/${DATA_VERSION}/data/en_US/item.json`; 
 
