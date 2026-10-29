@@ -1,14 +1,22 @@
-
-  // Application State
+// Application State
   let champions = [];
   let filteredChampions = [];
 
   let items = [];
   let filteredItems = [];
 
-  const DATA_VERSION = '15.20.1'; 
-  const CHAMPION_API = `https://ddragon.leagueoflegends.com/cdn/${DATA_VERSION}/data/en_US/champion.json`; 
-  const ITEM_API = `https://ddragon.leagueoflegends.com/cdn/${DATA_VERSION}/data/en_US/item.json`; 
+  // Data Dragon version: starts with a fallback, then switches to the newest version Riot publishes.
+  // This way new champions/items/runes appear and removed ones disappear automatically after each patch.
+  let DATA_VERSION = '16.21.1';
+  const versionReady = fetch('https://ddragon.leagueoflegends.com/api/versions.json')
+    .then(res => res.json())
+    .then(versions => {
+      if (Array.isArray(versions) && versions.length) DATA_VERSION = versions[0];
+    })
+    .catch(() => {});
+  const championApi = () => `https://ddragon.leagueoflegends.com/cdn/${DATA_VERSION}/data/en_US/champion.json`;
+  const itemApi = () => `https://ddragon.leagueoflegends.com/cdn/${DATA_VERSION}/data/en_US/item.json`;
+  const runesApi = () => `https://ddragon.leagueoflegends.com/cdn/${DATA_VERSION}/data/en_US/runesReforged.json`;
 
   // Navigation System
   function initNavigation() {
@@ -51,7 +59,8 @@
   async function loadChampions() {
     try {
       showChampionLoading();
-      const response = await fetch(CHAMPION_API);
+      await versionReady;
+      const response = await fetch(championApi());
       if (!response.ok) throw new Error('Failed to fetch champion data');
 
       const data = await response.json();
@@ -167,7 +176,8 @@
   async function loadItems() {
     try {
       showItemLoading();
-      const response = await fetch(ITEM_API);
+      await versionReady;
+      const response = await fetch(itemApi());
       if (!response.ok) throw new Error('Failed to fetch item data');
 
       const data = await response.json();
@@ -433,8 +443,6 @@ window.addEventListener("click", (e) => {
     initNavigation();
     initChampionFilters();
   });
-// Runes data source (Data Dragon API v15.14.1)
-const RUNES_API = `https://ddragon.leagueoflegends.com/cdn/${DATA_VERSION}/data/en_US/runesReforged.json`;
 
 // Variables pour stocker runes
 let runes = [];
@@ -444,8 +452,9 @@ let filteredRunes = [];
 async function loadRunes() {
   try {
     showRunesLoading();
+    await versionReady;
 
-    const response = await fetch(RUNES_API);
+    const response = await fetch(runesApi());
     if (!response.ok) throw new Error('Failed to fetch runes data');
 
     const data = await response.json();
@@ -649,6 +658,3 @@ window.addEventListener("click", (e) => {
     modal.setAttribute("aria-hidden", "true");
   }
 });
-
-
-
