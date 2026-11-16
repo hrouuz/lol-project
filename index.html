@@ -3,31 +3,50 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Leaguepedia: champions, items and runes for League of Legends, always up to date with the latest patch." />
+<meta name="theme-color" content="#0f1419" />
 <title>Leaguepedia - League of Legends Wiki</title>
+<link rel="preconnect" href="https://ddragon.leagueoflegends.com" crossorigin />
+<link rel="dns-prefetch" href="https://raw.communitydragon.org" />
+<link rel="dns-prefetch" href="https://cdn.merakianalytics.com" />
 <link rel="stylesheet" href="style.css" />
-<link rel="icon" href="data:image/webp;base64,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" type="image/x-icon" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23c8aa6e'/%3E%3Ctext x='32' y='41' font-size='26' font-weight='700' text-anchor='middle' fill='%230f1419' font-family='Arial'%3ELoL%3C/text%3E%3C/svg%3E" />
+<script src="code.js" defer></script>
 </head>
 <body>
+<noscript><p style="padding:16px;text-align:center;color:#c8aa6e;">This site needs JavaScript to load champions, items and guides.</p></noscript>
 <header>
-  <div class="logo">
+  <a href="#home" class="logo" id="logo-home" aria-label="Leaguepedia - go to Home">
     <div class="logo-icon">LoL</div>
     <h1>Leaguepedia</h1>
-  </div>
-  <nav>
+  </a>
+  <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+  <nav id="site-menu" class="site-menu" aria-label="All pages" hidden>
     <ul class="nav-links">
       <li><a href="#home" class="nav-link active" aria-current="page">Home</a></li>
       <li><a href="#champions" class="nav-link">Champions</a></li>
       <li><a href="#items" class="nav-link">Items</a></li>
+      <li><a href="#builds" class="nav-link">Builds</a></li>
+      <li><a href="#skins" class="nav-link">Skins</a></li>
+      <li><a href="#interactions" class="nav-link">Interactions</a></li>
+      <li><a href="#itemguide" class="nav-link">Item Guide</a></li>
+      <li><a href="#difficulty" class="nav-link">Difficulty</a></li>
+      <li><a href="#lore" class="nav-link">Lore</a></li>
+      <li><a href="#evolution" class="nav-link">Evolution</a></li>
       <li><a href="#runes" class="nav-link">Runes</a></li>
     </ul>
   </nav>
 </header>
 
-<div class="main-container">
+<main class="main-container">
   <!-- Home Section -->
   <section id="home" class="hero-section fade-in" style="display: block;">
     <h2>Welcome to the League of Legends Wiki!</h2>
-    <p>This is the ultimate resource for <a href="https://www.leagueoflegends.com/" target="_blank" rel="noopener noreferrer">League of Legends</a>, 
+    <p>This is the ultimate resource for <a href="https://www.leagueoflegends.com/" target="_blank" rel="noopener noreferrer">League of Legends</a>,
        the multiplayer online battle arena game developed by <a href="https://www.riotgames.com/" target="_blank" rel="noopener noreferrer">Riot Games</a>.</p>
     <p>Discover comprehensive information about champions, items, runes, and gameplay mechanics.</p>
     <p>Use the navigation above to explore different sections and enhance your knowledge of Runeterra.</p>
@@ -71,7 +90,7 @@
       </div>
     </div>
 
-    <div class="champion-grid" id="champion-grid">
+    <div class="champion-grid" id="champion-grid" aria-live="polite">
       <div class="loading">
         <div class="spinner"></div>
         Loading champions...
@@ -91,7 +110,7 @@
         <label for="item-search">Search Items</label>
         <input type="text" id="item-search" placeholder="Search items..." />
       </div>
-      
+
       <div class="filter-group">
         <label for="availability-filter">Item Type</label>
         <select id="availability-filter">
@@ -137,7 +156,7 @@
       </div>
     </div>
 
-    <div class="champion-grid" id="item-grid">
+    <div class="champion-grid" id="item-grid" aria-live="polite">
       <div class="loading">
         <div class="spinner"></div>
         Loading items...
@@ -145,69 +164,295 @@
     </div>
   </section>
 
+  <!-- Builds Section -->
+  <section id="builds" class="champions-section">
+    <div class="section-header">
+      <h2>Builds</h2>
+      <p>Type a champion's name to get a recommended item build: boots, core items and situational picks.</p>
+    </div>
+
+    <div class="filters build-search-bar">
+      <div class="filter-group">
+        <label for="build-search">Champion</label>
+        <input type="text" id="build-search" list="build-champions" placeholder="e.g. Ahri" autocomplete="off" />
+        <datalist id="build-champions"></datalist>
+      </div>
+    </div>
+
+    <div id="build-result" aria-live="polite"></div>
+  </section>
+
+  <!-- Skins Section -->
+  <section id="skins" class="champions-section">
+    <div class="section-header">
+      <h2>Skins</h2>
+      <p>Type a champion's name to see every skin it has, with pictures and names.</p>
+    </div>
+
+    <div class="filters build-search-bar">
+      <div class="filter-group">
+        <label for="skin-search">Champion</label>
+        <input type="text" id="skin-search" list="skin-champions" placeholder="e.g. Ahri" autocomplete="off" />
+        <datalist id="skin-champions"></datalist>
+      </div>
+    </div>
+
+    <div id="skin-result" aria-live="polite"></div>
+  </section>
+
+  <!-- Hidden Interactions Section -->
+  <section id="interactions" class="champions-section">
+    <div class="section-header">
+      <h2>Hidden Interactions</h2>
+      <p>Unusual mechanics explained: what Yasuo's Wind Wall blocks, what counts as a projectile, and how some spells interact.</p>
+    </div>
+
+    <div class="filters build-search-bar">
+      <div class="filter-group">
+        <label for="interaction-search">Search</label>
+        <input type="text" id="interaction-search" placeholder="e.g. Yasuo, projectile, shield..." autocomplete="off" />
+      </div>
+      <div class="filter-group">
+        <label for="interaction-category">Category</label>
+        <select id="interaction-category">
+          <option value="">All categories</option>
+          <option value="Projectiles">Projectiles</option>
+          <option value="Shields &amp; immunity">Shields &amp; immunity</option>
+          <option value="Movement &amp; targeting">Movement &amp; targeting</option>
+          <option value="Revives &amp; dead state">Revives &amp; dead state</option>
+          <option value="Items &amp; summoners">Items &amp; summoners</option>
+          <option value="Champion tricks">Champion tricks</option>
+          <option value="Crowd control">Crowd control</option>
+          <option value="Stats &amp; rules">Stats &amp; rules</option>
+        </select>
+      </div>
+    </div>
+
+    <p class="counter-note interaction-note">These describe how abilities and items commonly behave. Riot changes details over time, so test anything important in the Practice Tool.</p>
+
+    <div class="interaction-grid" id="interaction-grid"></div>
+  </section>
+
+  <!-- Item Guide Section -->
+  <section id="itemguide" class="champions-section">
+    <div class="section-header">
+      <h2>Item Guide</h2>
+      <p>How items work with abilities, on-hit effects, shields, healing and damage types, explained simply.</p>
+    </div>
+    <div class="filters build-search-bar">
+      <div class="filter-group">
+        <label for="itemguide-search">Search</label>
+        <input type="text" id="itemguide-search" placeholder="e.g. lifesteal, shield, on-hit..." autocomplete="off" />
+      </div>
+      <div class="filter-group">
+        <label for="itemguide-category">Category</label>
+        <select id="itemguide-category">
+          <option value="">All categories</option>
+          <option value="On-hit &amp; spell effects">On-hit &amp; spell effects</option>
+          <option value="Healing &amp; shields">Healing &amp; shields</option>
+          <option value="Damage types">Damage types</option>
+          <option value="Stats &amp; scaling">Stats &amp; scaling</option>
+          <option value="Items &amp; abilities">Items &amp; abilities</option>
+        </select>
+      </div>
+    </div>
+    <p class="counter-note interaction-note">Item details change often. Check the item's text in game or on the League Wiki for exact numbers.</p>
+    <div class="interaction-grid" id="itemguide-grid"></div>
+  </section>
+
+  <!-- Difficulty Section -->
+  <section id="difficulty" class="champions-section">
+    <div class="section-header">
+      <h2>Champion Difficulty Explained</h2>
+      <p>Not just a score: why a champion is easy or hard, from animation canceling to positioning, resources, combos and decisions.</p>
+    </div>
+    <div class="filters build-search-bar">
+      <div class="filter-group">
+        <label for="difficulty-search">Champion</label>
+        <input type="text" id="difficulty-search" list="difficulty-champions" placeholder="e.g. Yasuo" autocomplete="off" />
+        <datalist id="difficulty-champions"></datalist>
+      </div>
+    </div>
+    <div id="difficulty-result" aria-live="polite"></div>
+  </section>
+
+  <!-- Lore Section -->
+  <section id="lore" class="champions-section">
+    <div class="section-header">
+      <h2>Lore &amp; Connections</h2>
+      <p>Read a champion's story from Riot, see their region, and find rivals, family and friends.</p>
+    </div>
+    <div class="filters build-search-bar">
+      <div class="filter-group">
+        <label for="lore-search">Champion</label>
+        <input type="text" id="lore-search" list="lore-champions" placeholder="e.g. Lux" autocomplete="off" />
+        <datalist id="lore-champions"></datalist>
+      </div>
+    </div>
+    <div id="lore-result" aria-live="polite"></div>
+  </section>
+
+  <!-- Evolution Section -->
+  <section id="evolution" class="champions-section">
+    <div class="section-header">
+      <h2>Champion Evolution Archive</h2>
+      <p>How champions and game systems changed over the years: old abilities, reworks and removed mechanics.</p>
+    </div>
+    <div class="filters build-search-bar">
+      <div class="filter-group">
+        <label for="evolution-search">Search</label>
+        <input type="text" id="evolution-search" placeholder="e.g. Irelia, rune..." autocomplete="off" />
+      </div>
+      <div class="filter-group">
+        <label for="evolution-category">Category</label>
+        <select id="evolution-category">
+          <option value="">All categories</option>
+          <option value="Reworks">Reworks</option>
+          <option value="Removed systems">Removed systems</option>
+        </select>
+      </div>
+    </div>
+    <p class="counter-note interaction-note">This is a starter archive, not every change. Years are approximate; check the League Wiki's patch history for exact dates.</p>
+    <div class="interaction-grid" id="evolution-grid"></div>
+  </section>
+
   <!-- Runes Section -->
-</div>
-<section id="runes" class="page-section" style="display:none;">
-  <div class="section-header">
-    <h2>Runes</h2>
-    <p>Explore the most common rune setups used by League of Legends champions.</p>
-  </div>
-
-  <div class="filters" id="runes-filters">
-    <div class="filter-group">
-      <label for="rune-tree-filter">Primary Rune Tree</label>
-      <select id="rune-tree-filter">
-        <option value="">All Trees</option>
-        <option value="Precision">Precision</option>
-        <option value="Domination">Domination</option>
-        <option value="Sorcery">Sorcery</option>
-        <option value="Resolve">Resolve</option>
-        <option value="Inspiration">Inspiration</option>
-      </select>
+  <section id="runes" class="champions-section">
+    <div class="section-header">
+      <h2>Runes</h2>
+      <p>Explore every rune in League of Legends, grouped by rune tree.</p>
     </div>
-    <div class="filter-group">
-      <label for="rune-search">Search by name</label>
-      <input type="text" id="rune-search" placeholder="Search runes...">
-    </div>
-  </div>
 
-  <div id="rune-grid" class="champion-grid" aria-live="polite">
-    <!-- Runes will be dynamically inserted here -->
-  </div>
-</section>
+    <div class="filters" id="runes-filters">
+      <div class="filter-group">
+        <label for="rune-tree-filter">Primary Rune Tree</label>
+        <select id="rune-tree-filter">
+          <option value="">All Trees</option>
+          <option value="Precision">Precision</option>
+          <option value="Domination">Domination</option>
+          <option value="Sorcery">Sorcery</option>
+          <option value="Resolve">Resolve</option>
+          <option value="Inspiration">Inspiration</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="rune-search">Search by name</label>
+        <input type="text" id="rune-search" placeholder="Search runes..." />
+      </div>
+    </div>
+
+    <div class="champion-grid" id="rune-grid" aria-live="polite">
+      <!-- Runes are inserted here by code.js -->
+    </div>
+  </section>
+</main>
+
 <!-- Champion Details Modal -->
 <div id="champion-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="champion-modal-title">
   <div class="modal-content">
     <button id="modal-close" aria-label="Close champion details">&times;</button>
     <h2 id="champion-modal-title"></h2>
     <h3 id="champion-modal-subtitle"></h3>
-    <img id="champion-modal-image" alt="" />
+    <img id="champion-modal-image" alt="" width="120" height="120" />
     <p id="champion-modal-lore"></p>
-    <p><strong>Recommended Positions:</strong> <span id="champion-modal-positions"></span></p>
-    <p><strong>Starter Items:</strong></p>
-    <ul id="champion-modal-items"></ul>
+    <p><strong>Main Position:</strong> <span id="champion-modal-positions"></span></p>
+    <p><strong>Biggest Counters:</strong></p>
+    <ul id="champion-modal-counters"></ul>
+    <div id="champion-modal-difficulty-box" hidden>
+      <p><strong>Why it's hard (or easy):</strong> <span id="champion-modal-difficulty"></span></p>
+    </div>
+    <div id="champion-modal-interactions-box" hidden>
+      <p><strong>Hidden Interactions:</strong></p>
+      <ul id="champion-modal-interactions"></ul>
+    </div>
+    <p class="counter-note">Typical counters from general matchup knowledge. Real counters vary by role and patch.</p>
   </div>
 </div>
+
 <!-- Item Details Modal -->
 <div id="item-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="item-modal-title">
   <div class="modal-content">
     <button id="item-modal-close" aria-label="Close item details">&times;</button>
     <h2 id="item-modal-title"></h2>
-    <img id="item-modal-image" alt="" />
+    <img id="item-modal-image" alt="" width="120" height="120" />
     <p id="item-modal-description"></p>
     <p><strong>Price:</strong> <span id="item-modal-price"></span></p>
     <p><strong>Stats:</strong> <span id="item-modal-stats"></span></p>
   </div>
 </div>
 
+<!-- Skin Modal -->
+<div id="skin-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="skin-modal-title">
+  <div class="modal-content">
+    <button id="skin-modal-close" aria-label="Close skin">&times;</button>
+    <h2 id="skin-modal-title"></h2>
+    <p id="skin-modal-price" class="skin-modal-price"></p>
+    <img id="skin-modal-image" alt="" />
+    <div id="skin-chromas" class="skin-chromas" aria-live="polite"></div>
+  </div>
+</div>
+
+<!-- Pop-style figure used by the helper (an original drawing inspired by Viego) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="pop-viego" viewBox="0 0 64 84">
+    <ellipse cx="32" cy="77" rx="28" ry="6" fill="#5ff2d0" opacity="0.18"/>
+    <ellipse cx="32" cy="77" rx="21" ry="5" fill="#12161b" stroke="#c8aa6e" stroke-width="1.4"/>
+    <rect x="21" y="70" width="9" height="6" rx="3" fill="#0e1215"/>
+    <rect x="34" y="70" width="9" height="6" rx="3" fill="#0e1215"/>
+    <rect x="12" y="49" width="9" height="19" rx="4.5" fill="#16242a"/>
+    <rect x="43" y="49" width="9" height="19" rx="4.5" fill="#16242a"/>
+    <circle cx="16.5" cy="69" r="3.4" fill="#e9e3da"/>
+    <circle cx="47.5" cy="69" r="3.4" fill="#e9e3da"/>
+    <rect x="19" y="45" width="26" height="27" rx="9" fill="#1c2f35"/>
+    <path d="M19 62 L25 66 L29 61 L35 67 L39 61 L45 65 L45 63 C45 70 41 72 32 72 C23 72 19 70 19 63 Z" fill="#0f1a1e"/>
+    <circle cx="32" cy="57" r="5.2" fill="#5ff2d0" opacity="0.25"/>
+    <circle cx="32" cy="57" r="3.2" fill="#5ff2d0"/>
+    <path d="M26 46 L32 54 L38 46" fill="none" stroke="#c8aa6e" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M8 28 C8 4 56 4 56 28 L56 46 C56 50 49 51 48 46 L47 38 L17 38 L16 46 C15 51 8 50 8 46 Z" fill="#cfd5dc"/>
+    <rect x="11" y="9" width="42" height="38" rx="17" fill="#ece6dd"/>
+    <path d="M10 25 C12 8 52 8 54 25 C46 19 40 27 34 18 C30 27 20 19 10 25 Z" fill="#cfd5dc"/>
+    <ellipse cx="23.5" cy="33" rx="3.2" ry="4.3" fill="#0b0b0d"/>
+    <ellipse cx="40.5" cy="33" rx="3.2" ry="4.3" fill="#0b0b0d"/>
+    <circle cx="24.5" cy="31.4" r="1.1" fill="#7ff5de"/>
+    <circle cx="41.5" cy="31.4" r="1.1" fill="#7ff5de"/>
+    <ellipse cx="32" cy="10.5" rx="15" ry="2.2" fill="#5ff2d0" opacity="0.35"/>
+    <path d="M17 11 L20 3 L26 9 L32 1.8 L38 9 L44 3 L47 11 Z" fill="#2a2f36" stroke="#c8aa6e" stroke-width="1.3" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+<!-- Viego helper: follows the cursor and answers questions from this site's guides -->
+<div id="mascot-follower" class="mascot-follower" aria-hidden="true" hidden>
+  <div class="pop-lean">
+    <svg class="pop-figure" viewBox="0 0 64 84" width="56" height="73" aria-hidden="true"><use href="#pop-viego"></use></svg>
+  </div>
+</div>
+
+<button type="button" id="mascot-button" class="mascot-button" aria-label="Ask Viego a question" aria-expanded="false" aria-controls="chat-panel">
+  <svg viewBox="0 0 64 84" width="30" height="40" aria-hidden="true"><use href="#pop-viego"></use></svg>
+  <span>Ask Viego</span>
+</button>
+
+<div id="chat-panel" class="chat-panel" role="dialog" aria-label="Ask Viego" hidden>
+  <header class="chat-header">
+    <svg viewBox="0 0 64 84" width="34" height="44" aria-hidden="true"><use href="#pop-viego"></use></svg>
+    <div>
+      <strong>Viego</strong>
+      <small>Answers from this site's guides</small>
+    </div>
+    <button type="button" id="chat-close" aria-label="Close chat">&times;</button>
+  </header>
+  <div id="chat-log" class="chat-log" role="log" aria-live="polite"></div>
+  <form id="chat-form" class="chat-form">
+    <input id="chat-input" type="text" placeholder="Ask about a champion, item or mechanic..." autocomplete="off" aria-label="Your question" />
+    <button type="submit">Send</button>
+  </form>
+  <label class="chat-follow"><input type="checkbox" id="mascot-follow-toggle" /> Follow my cursor</label>
+</div>
 
 <footer>
   <p>For official game information, visit <a href="https://www.leagueoflegends.com/" target="_blank" rel="noopener noreferrer">League of Legends</a>.</p>
   <p>Data provided by Riot Games API</p>
   <p>Contact <a href="mailto:hrouzito@gmail.com">here</a></p>
 </footer>
-<script src="code.js"></script>
 </body>
-
 </html>
-
